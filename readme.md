@@ -10,16 +10,23 @@
 * input	file:	Copenhagen,Stockholm,Oslo	
 * output file:	Stockholm,Oslo,Copenhagen	
 
-## Setup/Installation Requirements
+## Docker Setup Installation
 ### Clone repository.
-### Install Ruby and bundle Gems
-* `$ bundle install`
+### Install Docker on your computer.
+### Run the following Docker commands....
+* `$ docker build -t yourname:1.0 .`  Installation will take a couple of minutes and the image size is ~1GB.
+* `$ docker images` To view the list of Docker images.
+* `$ docker run "IMAGE ID"` Copy and paste the 12 character alphanumeric IMAGE ID matching your name.
+OR
+* `$ docker run yourname:1.0` 
 
-### Run cucumber in the terminal's home directory path to view the Gherkin Tests
+### Non-Docker Setup Installation
+### Clone repository.
+### Run cucumber in the terminal's home directory path to view the Gherkin Tests.
 * `$ cucumber`
 
 ## Technologies Used
-* Ruby
+* Ruby 2.3.8
 * Cucumber and Gherkin
 * Docker
 
