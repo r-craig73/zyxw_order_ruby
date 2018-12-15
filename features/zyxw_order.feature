@@ -11,10 +11,9 @@ Feature: Switch words to ZYXW order?
 			| input.csv | Correct file |
 			| anything else! | Not the correct file, looking for input.csv |
 
-	# Scenario: Read input.csv file
-	# 	Given the correct filename 
-	# 	When I ask if to read the filename
-	# 	Then I should be told the "words are uploaded in an array"
+	Scenario: Read the correct filename
+		When reading the correct filename
+		Then I should be told the "<array_answer>"
 
 	# Scenario Outline: Verify each element in the words array is a word
 	# 	Given a words array
