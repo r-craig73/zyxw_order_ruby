@@ -19,10 +19,19 @@ Then('I should be told {string}') do |expected_answer|
   expect(@file_reply).to eq(expected_answer)
 end
 
-When("reading the correct filename") do
-  pending # Write code here that turns the phrase above into concrete actions
+When('reading the correct filename') do
+  words = %w[Rome Cario Portland]
+  cities = words.is_a?(Array)
+  def an_array(name)
+    if name == true
+      'cities are stored in an array'
+    else
+      'oh no'
+    end
+  end
+  @array_reply = an_array(cities)
 end
 
 Then('I should be told the {string}') do |expected_array_answer|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@array_reply).to eq(expected_array_answer)
 end
