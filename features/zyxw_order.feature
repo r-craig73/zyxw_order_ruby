@@ -13,7 +13,7 @@ Feature: Switch words to ZYXW order?
 
 	Scenario: Read the correct filename
 		When reading the correct filename
-		Then I should be told the "<array_answer>"
+		Then I should be told the "cities are stored in an array"
 
 	# Scenario Outline: Verify each element in the words array is a word
 	# 	Given a words array
