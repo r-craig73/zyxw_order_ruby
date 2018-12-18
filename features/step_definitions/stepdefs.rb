@@ -32,17 +32,17 @@ When('insert the cities into an array') do
   @array_reply = an_array(@cities)
 end
 
-# When('the cities are not stored in an array') do
-#   def an_array(name)
-#     'no array' if name.is_a?(Array) == false
-#   end
-#   @no_array_reply = an_array(@cities)
-# end
+When('the cities are not stored in an array') do
+  def an_array(name)
+    'no array' if name.is_a?(Array) == false
+  end
+  @no_array_reply = an_array(@cities)
+end
 
 Then('I should see {string}') do |expected_array_answer|
   expect(@array_reply).to eq(expected_array_answer)
 end
 
-# Then('I should see an output {string}') do |expected_array_answer|
-#   expect(@no_array_reply).to eq(expected_array_answer)
-# end
+Then('I should see an output {string}') do |expected_array_answer|
+  expect(@no_array_reply).to eq(expected_array_answer)
+end
