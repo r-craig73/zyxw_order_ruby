@@ -16,10 +16,10 @@ Feature: Switch words to ZYXW order?
 			And insert the cities into an array
 		Then I should see 'cities are stored in an array'
 
-	# Scenario: Read the input filename and there is no array
-	# 	When I read the input filename
-	# 		And the cities are not stored in an array
-	# 	Then I should be told 'no array'
+	Scenario: Read the input filename and there is no array
+		When I read the input filename
+			And the cities are not stored in an array
+		Then I should see an output 'no array'
 
 	# Scenario Outline: Verify each element in the words array is a word
 	# 	Given a words array
