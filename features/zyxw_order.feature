@@ -11,9 +11,15 @@ Feature: Switch words to ZYXW order?
 			| input.csv | Correct file |
 			| anything else! | Not the correct file, looking for input.csv |
 
-	Scenario: Read the correct filename
-		When reading the correct filename
-		Then I should be told the "cities are stored in an array"
+	Scenario: Read the input filename as an array
+		When I read the input filename
+			And insert the cities into an array
+		Then I should see 'cities are stored in an array'
+
+	# Scenario: Read the input filename and there is no array
+	# 	When I read the input filename
+	# 		And the cities are not stored in an array
+	# 	Then I should be told 'no array'
 
 	# Scenario Outline: Verify each element in the words array is a word
 	# 	Given a words array
