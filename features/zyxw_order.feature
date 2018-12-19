@@ -11,17 +11,22 @@ Feature: Switch words to ZYXW order?
 			| input.csv | Correct file |
 			| anything else! | Not the correct file, looking for input.csv |
 
-	Scenario: Read the input filename as an array
-		When I read the input filename
-			And insert the cities into an array
-		Then I should see 'cities are stored in an array'
+	Scenario Outline: Verify a comma(s) is(are) present in the long string
+		Given "<inputs>" from inputs.csv
+		When I verify there are commas in the string
+		Then I should see "<array_answer>"
 
-	Scenario: Read the input filename and there is no array
-		When I read the input filename
-			And the cities are not stored in an array
-		Then I should see an output 'no array'
+		Examples:
+			| inputs | array_answer |
+			| 'Canton,Portland,Rome' | Cities can be stored into an array |
+			| 'Canton-Portland-Rome' | No commas in string, therefore no array |
 
-	# Scenario Outline: Verify each element in the words array is a word
+	# Scenario: Split the cities into array elements
+	# 	Given "<inputs>" from inputs.csv
+	# 	When I ask to split the cities into array elements
+	#		Then the cities are split into array elements
+
+	# Scenario Outline: Verify each city array element is a word
 	# 	Given a words array
 	# 		And ignoring the last words array "<element>"
 	# 	When I ask to verify each words array "<element>" is a word
