@@ -39,8 +39,10 @@ Then('I should see {string}') do |expected_array_answer|
   expect(@array_commas).to eq(expected_array_answer)
 end
 
-# When('the cities are split into an an array') do
-#   if @array_commas == 'Cities can be stored into an array'
-#     @city_of_arrays = @cities.split(',')
-#   end
-# end
+When('I split each city string into an array element') do
+  @array_of_cities = @cities.split(',')
+end
+
+Then('the cities strings are split into array elements') do
+  expect(@array_of_cities).to be_an(Array)
+end
