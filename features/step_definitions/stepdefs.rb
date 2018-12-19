@@ -20,29 +20,27 @@ Then('I should be told {string}') do |expected_answer|
   expect(@filename_reply).to eq(expected_answer)
 end
 
-When('I read the input filename') do
-  @cities = 'Rome,Cario,Portland'
+Given('{string} from inputs.csv') do |given_cities|
+  @cities = given_cities
 end
 
-When('insert the cities into an array') do
-  def an_array(name)
-    list_of_cities = name.split(',')
-    'cities are stored in an array' if list_of_cities.is_a?(Array) == true
+When('I verify there are commas in the string') do
+  def any_commas(name)
+    if name.scan(/,/).empty?
+      'No commas in string, therefore no array'
+    else
+      'Cities can be stored into an array'
+    end
   end
-  @array_reply = an_array(@cities)
-end
-
-When('the cities are not stored in an array') do
-  def an_array(name)
-    'no array' if name.is_a?(Array) == false
-  end
-  @no_array_reply = an_array(@cities)
+  @array_commas = any_commas(@cities)
 end
 
 Then('I should see {string}') do |expected_array_answer|
-  expect(@array_reply).to eq(expected_array_answer)
+  expect(@array_commas).to eq(expected_array_answer)
 end
 
-Then('I should see an output {string}') do |expected_array_answer|
-  expect(@no_array_reply).to eq(expected_array_answer)
-end
+# When('the cities are split into an an array') do
+#   if @array_commas == 'Cities can be stored into an array'
+#     @city_of_arrays = @cities.split(',')
+#   end
+# end
