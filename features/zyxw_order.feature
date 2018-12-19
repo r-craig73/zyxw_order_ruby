@@ -21,10 +21,10 @@ Feature: Switch words to ZYXW order?
 			| 'Canton,Portland,Rome' | Cities can be stored into an array |
 			| 'Canton-Portland-Rome' | No commas in string, therefore no array |
 
-	# Scenario: Split the cities into array elements
-	# 	Given "<inputs>" from inputs.csv
-	# 	When I ask to split the cities into array elements
-	#		Then the cities are split into array elements
+	Scenario: Place each city string into an array element
+		Given "<inputs>" from inputs.csv
+		When I split each city string into an array element
+		Then the cities strings are split into array elements
 
 	# Scenario Outline: Verify each city array element is a word
 	# 	Given a words array
