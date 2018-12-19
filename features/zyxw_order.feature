@@ -32,16 +32,18 @@ Feature: Switch words to ZYXW order?
 		Then the array of cities are sorted in descending alphabetical order
 
 	Scenario Outline: Verify each city array element is a city
-		Given an array of cities "<element>"
+		Given a city array "<element>"
 		When I verify a city array element is a city
 		Then the city array element is "<city_answer>"
 
 		Examples:
 		| element | city_answer |
-		| 'Portland' | a word |
-		| 'Stockholm' | a word |
-		| 'Port land' | not a word |
-		| 'St0ckh0lm' | not a word |
+		| 'Portland' | a city|
+		| 'Stockholm' | a city |
+		| 'Canton' | a city |
+		| 'Port land' | not a city |
+		| 'St0ckh0lm' | not a city |
+		| 'Can-+!ton' | not a city |
 
 	# Scenario: Combine city array into a long string
 	# 	Given the array of words
