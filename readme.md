@@ -36,17 +36,19 @@ _Please contact ron.craig@comcast.net with any questions._
 ### MIT License
 
 ## Programming Questions & Answers
-### 1. Write Gherkin tests for the program you wrote above.	Use	any	Gherkin	features or practices	you	want.	Don’t write	step definitions (i.e.,	the	tests	don’t	have to	be executable).	
+### 1. Write Gherkin tests for the program you wrote above.	Use	any	Gherkin	features or practices	you	want.	Don’t write	step definitions (i.e., the tests don’t have to be executable).	
 ### * Completed.  Feature files are located in `./features/zyxw_order.feature`
 ### 2. Explain in	detail why these tests might be helpful in the future.
-| Scenario or Scenario Outline | Purpose                 |
-| :---:                        |     :---                |
-| Verify correct filename | To make sure the user selected the correct file. |
-| Read input.csv file | To Read the files, remove the commas, and create an array for each word and new line character as an element.|
-| Verify each element in the words array is a word | The programmer could either use special methods/functions or regular expression to determine if the string element is a word (i.e. whitespace, numbers, extra commas, and/or unique characters). Also to verify if there are extra new line characters (extra rows). |
-| Verify the last words array element contains a new line character ("\n") | Verify the list of words contains a new line character. |
-| The word array is sorted in descending alphabetical order | Use a special method or functions to sort the word array elements. |
-| The word array is stored as a new file "output.csv" | Create a new string to concatenate the words, add a comma between each word, and append a new line character string at the end.  After writing the file, let the user will see a confirmation message. |
+| Scenario or Scenario Outline | Purpose                 | Status |
+| :---:                        |     :---                | :---:  |
+| Verify correct filename | To make sure the user selected the correct file. | Completed |
+| Verify commas are present | To make sure commas are present in the long string. | Completed |
+| Place each city string into an array element | To read the files and create an element array for each city.| Ongoing |
+| Sort the cities array into descending alphabetical order | Use a special Array class method to sort the word array elements. | Ongoing |
+| Verify each city array element is a word | Use either use special Class methods or regular expression to determine if the string element is a word (i.e. whitespace, numbers, extra commas, and/or unique characters). | Ongoing |
+| Merge all city array elements into a long string | Use either use special Class methods or regular expression to merge all the cities into one long string.  Placing a comma between each city | Ongoing |
+| The long string of cities is saved as a new file `output.csv` | Use a special File class method to create an `output.csv` file.  After writing the file, let the user will see a confirmation message. | Ongoing |
+| Verify the last words array element contains a new line character ("\n") | Verify the list of words contains a new line character. | Not needed? |
 
 ## Tools Questions & Answers
 ### 1. In	your opinion,	what’s helpful about version control systems?  What’s annoying about them?
