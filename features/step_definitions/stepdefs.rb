@@ -46,3 +46,16 @@ end
 Then('the cities strings are split into array elements') do
   expect(@array_of_cities).to be_an(Array)
 end
+
+Given('an array of cities') do
+  long_list = 'Canton,Portland,Rome'
+  @another_array_of_cities = long_list.split(',')
+end
+
+When('I sort the array of cities into descending alphabetical order') do
+  @reverse_array_of_cities = @another_array_of_cities.sort! { |x, y| y <=> x }
+end
+
+Then('the array of cities are sorted in descending alphabetical order') do
+  expect(@reverse_array_of_cities).to match_array(%w[Rome Portland Canton])
+end
