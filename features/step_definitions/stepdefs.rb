@@ -60,14 +60,21 @@ Then('the array of cities are sorted in descending alphabetical order') do
   expect(@reverse_array_of_cities).to match_array(%w[Rome Portland Canton])
 end
 
-Given('an array of cities {string}') do |given_element|
-  pending # Write code here that turns the phrase above into concrete actions
+Given('a city array {string}') do |given_element|
+  @city_element = given_element
 end
 
 When('I verify a city array element is a city') do
-  pending # Write code here that turns the phrase above into concrete actions
+  def city_a_word(name)
+    if name.scan(/[[:digit:][:punct:][:blank:]]/).empty?
+      'a city'
+    else
+      'not a city'
+    end
+  end
+  @city_word_answer = city_a_word(@city_element)
 end
 
 Then('the city array element is {string}') do |city_answer|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@city_word_answer).to match(city_answer)
 end
