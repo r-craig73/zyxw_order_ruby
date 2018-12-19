@@ -59,3 +59,15 @@ end
 Then('the array of cities are sorted in descending alphabetical order') do
   expect(@reverse_array_of_cities).to match_array(%w[Rome Portland Canton])
 end
+
+Given('an array of cities {string}') do |given_element|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When('I verify a city array element is a city') do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then('the city array element is {string}') do |city_answer|
+  pending # Write code here that turns the phrase above into concrete actions
+end
