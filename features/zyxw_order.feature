@@ -28,45 +28,28 @@ Feature: Switch words to ZYXW order?
 
 	Scenario: Sort cities array into descending alphabetical order
 		Given an array of cities
-		When I sort the cities the descending alphabetical order
+		When I sort the array of cities into descending alphabetical order
 		Then the array of cities are sorted in descending alphabetical order
 
 	# Scenario Outline: Verify each city array element is a word
-	# 	Given a words array
-	# 		And ignoring the last words array "<element>"
-	# 	When I ask to verify each words array "<element>" is a word
-	# 	Then I should be told "<element>" is "<word_answer>"
+	# 	Given an array of cities
+	# 	When I ask to verify each city array "<element>" is a word
+	# 	Then I the city array "<element>" is "<word_answer>"
 
 	# 	Examples:
 	# 	| element | word_answer |
-	# 	| "Portland" | "a word" |
-	# 	| "Stockholm" | "a word" |
-	# 	| "Port land" | "not a word" |
-	# 	| "St0ckh0lm" | "not a word" |
-	# 	| "\n" | "not a word" |
+	# 	| "Portland" | a word |
+	# 	| "Stockholm" | a word |
+	# 	| "Port land" | not a word |
+	# 	| "St0ckh0lm" | not a word |
 
-	# Scenario Outline: Verify the last words array element contains a new line character ("\n")
-	# 	Given the words array
-	# 	When I ask if to verify the words array "<last_element>" is a new line character
-	# 	Then I should be told "<last_element_answer>"
-
-	# 	Examples:
-	# 	| last_element | last_element_answer |
-	# 	| "\n" | "new line character is present" |
-	# 	| "n" | "new line character is not present" |
-	# 	| "anything else!" | "new line character is not present" |
-
-	# Scenario: The word array is sorted in descending alphabetical order
+	# Scenario: Combine city array into a long string
 	# 	Given the array of words
-	# 		And ignoring the last words array "<element>"
-	# 	When I ask to sort the array of words in descending alphabetical order
-	# 	Then I should be told "the array of words are sorted"
+	# 	When I ask to combine the cities array
+	# 	Then there should be a long string of cities
 
-	# Scenario: The word array is stored as a new file "output.csv"
-	# 	Given the array of words
-	# 	When I ask to write a new file
-	# 	Then the word array are stored as a single string
-	# 		And there should be a comma between each word
-	# 		And there should be a new line character at the end of the string
-	# 	Then I should be told "output.csv file is generated"
+	# Scenario: Write the long string of cities into file "output.csv"
+	# 	Given a long string of cities
+	# 	When I ask to write the long string of cities to "output.csv"
+	# 	Then the new file should be created
 		
