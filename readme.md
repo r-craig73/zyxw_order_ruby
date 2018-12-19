@@ -43,8 +43,8 @@ _Please contact ron.craig@comcast.net with any questions._
 | :---:                        |     :---                | :---:  |
 | Verify correct filename | To make sure the user selected the correct file. | Completed |
 | Verify commas are present | To make sure commas are present in the long string. | Completed |
-| Place each city string into an array element | To read the files and create an element array for each city.| Ongoing |
-| Sort the cities array into descending alphabetical order | Use a special Array class method to sort the word array elements. | Ongoing |
+| Place each city string into an array element | To read the files and create an element array for each city.| Completed |
+| Sort cities array into descending alphabetical order | Use a special Array class method to sort the word array elements. | Ongoing |
 | Verify each city array element is a word | Use either use special Class methods or regular expression to determine if the string element is a word (i.e. whitespace, numbers, extra commas, and/or unique characters). | Ongoing |
 | Merge all city array elements into a long string | Use either use special Class methods or regular expression to merge all the cities into one long string.  Placing a comma between each city | Ongoing |
 | The long string of cities is saved as a new file `output.csv` | Use a special File class method to create an `output.csv` file.  After writing the file, let the user will see a confirmation message. | Ongoing |
