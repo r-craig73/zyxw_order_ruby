@@ -1,5 +1,5 @@
 Feature: Switch words to ZYXW order?
-	Read one CSV file with a string list of words and create a CSV file, with a string list of words in descending alpabetidcal order
+	Read one CSV file with a string list of words and create a CSV file, with a string list of words in descending alphabetical order
 
 	Scenario Outline: Verify correct filename
 		Given a CSV file "<filename>"
@@ -25,6 +25,11 @@ Feature: Switch words to ZYXW order?
 		Given "<inputs>" from inputs.csv
 		When I split each city string into an array element
 		Then the cities strings are split into array elements
+
+	Scenario: Sort cities array into descending alphabetical order
+		Given an array of cities
+		When I sort the cities the descending alphabetical order
+		Then the array of cities are sorted in descending alphabetical order
 
 	# Scenario Outline: Verify each city array element is a word
 	# 	Given a words array
