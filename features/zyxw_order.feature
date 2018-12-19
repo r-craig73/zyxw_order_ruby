@@ -31,17 +31,17 @@ Feature: Switch words to ZYXW order?
 		When I sort the array of cities into descending alphabetical order
 		Then the array of cities are sorted in descending alphabetical order
 
-	# Scenario Outline: Verify each city array element is a word
-	# 	Given an array of cities
-	# 	When I ask to verify each city array "<element>" is a word
-	# 	Then I the city array "<element>" is "<word_answer>"
+	Scenario Outline: Verify each city array element is a city
+		Given an array of cities "<element>"
+		When I verify a city array element is a city
+		Then the city array element is "<city_answer>"
 
-	# 	Examples:
-	# 	| element | word_answer |
-	# 	| "Portland" | a word |
-	# 	| "Stockholm" | a word |
-	# 	| "Port land" | not a word |
-	# 	| "St0ckh0lm" | not a word |
+		Examples:
+		| element | city_answer |
+		| 'Portland' | a word |
+		| 'Stockholm' | a word |
+		| 'Port land' | not a word |
+		| 'St0ckh0lm' | not a word |
 
 	# Scenario: Combine city array into a long string
 	# 	Given the array of words
