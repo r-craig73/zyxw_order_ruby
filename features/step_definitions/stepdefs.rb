@@ -20,7 +20,7 @@ Then('I should be told {string}') do |expected_answer|
   expect(@filename_reply).to eq(expected_answer)
 end
 
-Given('{string} from inputs.csv') do |given_cities|
+Given('{string} from input.csv') do |given_cities|
   @cities = given_cities
 end
 
@@ -37,6 +37,10 @@ end
 
 Then('I should see {string}') do |expected_array_answer|
   expect(@array_commas).to eq(expected_array_answer)
+end
+
+Given('a long string after reading file input.csv') do
+  pending
 end
 
 When('I split each city string into an array element') do
