@@ -40,7 +40,7 @@ Then('I should see {string}') do |expected_array_answer|
 end
 
 Given('a long string after reading file input.csv') do
-  pending
+  @cities = File.read('input.csv')
 end
 
 When('I split each city string into an array element') do
