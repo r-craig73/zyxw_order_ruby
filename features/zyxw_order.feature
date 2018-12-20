@@ -45,10 +45,10 @@ Feature: Switch words to ZYXW order?
 		| 'St0ckh0lm' | not a city |
 		| 'Can-+!ton' | not a city |
 
-	# Scenario: Combine city array into a long string
-	# 	Given the array of words
-	# 	When I ask to combine the cities array
-	# 	Then there should be a long string of cities
+	Scenario: Combine city array into a long string
+		Given the array of words
+		When I ask to combine the cities array
+		Then there should be a long string of cities
 
 	# Scenario: Write the long string of cities into file "output.csv"
 	# 	Given a long string of cities
