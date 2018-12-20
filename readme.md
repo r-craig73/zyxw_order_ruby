@@ -26,7 +26,7 @@ OR
 * `$ cucumber`
 
 ## Technologies Used
-* Ruby 2.3.8
+* Ruby 2.5.1
 * Cucumber and Gherkin
 * Docker
 
