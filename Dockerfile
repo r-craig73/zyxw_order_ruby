@@ -1,4 +1,4 @@
-FROM ruby:2.3.8
+FROM ruby:2.5.1-slim-stretch
 
 LABEL maintainer="ron.craig@comcast.net"
 
