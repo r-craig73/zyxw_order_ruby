@@ -12,7 +12,7 @@ Feature: Switch words to ZYXW order?
 			| anything else! | Not the correct file, looking for input.csv |
 
 	Scenario Outline: Verify a comma(s) is(are) present in the long string
-		Given "<inputs>" from inputs.csv
+		Given "<inputs>" from input.csv
 		When I verify there are commas in the string
 		Then I should see "<array_answer>"
 
@@ -22,7 +22,7 @@ Feature: Switch words to ZYXW order?
 			| 'Canton-Portland-Rome' | No commas in string, therefore no array |
 
 	Scenario: Place each city string into an array element
-		Given "<inputs>" from inputs.csv
+		Given a long string after reading file input.csv
 		When I split each city string into an array element
 		Then the cities strings are split into array elements
 
