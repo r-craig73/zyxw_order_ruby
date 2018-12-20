@@ -86,3 +86,15 @@ end
 Then('there should be a long string of cities') do
   expect(@long_string).to match('Rome,Portland,Canton')
 end
+
+Given('a long string of cities') do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When('I ask to write the long string of cities to filename output.csv') do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then('the new file should be created') do
+  pending # Write code here that turns the phrase above into concrete actions
+end
