@@ -47,7 +47,7 @@ _Please contact ron.craig@comcast.net with any questions._
 | Sort cities array into descending alphabetical order | Use a special Array class method to sort the word array elements. | Completed |
 | Verify each city array element is a word | Use either use special Class methods or regular expression to determine if the string element is a word (i.e. whitespace, numbers, extra commas, and/or unique characters). | Completed |
 | Combine city array into a long string | Use either use special Class methods or regular expression to merge all the cities into one long string.  Placing a comma between each city | Completed |
-| Write the long string of cities into file `output.csv` | Use a special File class method to create an `output.csv` file.  After writing the file, let the user will see a confirmation message. | Ongoing |
+| Write the long string of cities into file `output.csv` | Use a File class method to create an `output.csv` file.  Insert the long string of cities into the file, then close the file.  Verify file `output.csv` is created. | Completed |
 
 ## Tools Questions & Answers
 ### 1. In	your opinion,	what’s helpful about version control systems?  What’s annoying about them?
