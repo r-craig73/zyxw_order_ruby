@@ -46,7 +46,6 @@ Feature: Switch words to ZYXW order?
 		| 'Can-+!ton' | not a city |
 
 	Scenario: Combine city array into a long string
-		Given the array of words
 		When I ask to combine the cities array
 		Then there should be a long string of cities
 

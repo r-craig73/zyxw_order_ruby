@@ -78,3 +78,11 @@ end
 Then('the city array element is {string}') do |city_answer|
   expect(@city_word_answer).to match(city_answer)
 end
+
+When('I ask to combine the cities array') do
+  pending
+end
+
+Then('there should be a long string of cities') do
+  pending
+end
