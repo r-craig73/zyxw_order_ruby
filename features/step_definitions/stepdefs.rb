@@ -79,10 +79,10 @@ Then('the city array element is {string}') do |city_answer|
   expect(@city_word_answer).to match(city_answer)
 end
 
-When('I ask to combine the cities array') do
-  pending
+When('I ask to combine the descending alphabetical order cities array') do
+  @long_string = %w[Rome Portland Canton].join(',')
 end
 
 Then('there should be a long string of cities') do
-  pending
+  expect(@long_string).to match('Rome,Portland,Canton')
 end
